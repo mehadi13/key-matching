@@ -1,4 +1,5 @@
-document.getElementById("toast").style.display = 'none';
+document.getElementById("toast-green").style.display = 'none'
+document.getElementById("toast-red").style.display = 'none'
 const displaySecretKey = document.getElementById("secret-key");
 const displayInput = document.getElementById("display-input");
 
@@ -27,18 +28,18 @@ function deleteLast() {
 
 function clearInput() {
     displayInput.innerText = "0";
-    document.getElementById("toast").style.display = 'none'
+    document.getElementById("toast-green").style.display = 'none'
+    document.getElementById("toast-red").style.display = 'none'
 }
 
 function submitPIN() {
     const pin = displayInput.innerText;
     const secretKey = displaySecretKey.innerText;
-    document.getElementById("toast").style.display = 'block'
     if (pin === secretKey) {
-        document.getElementById("icon").src = './assets/right.png';
-        document.getElementById("notify").innerText = 'Right';
+        document.getElementById("toast-green").style.display = 'grid'
+        document.getElementById("toast-red").style.display = 'none'
     } else {
-        document.getElementById("icon").src = './assets/wrong.png';
-        document.getElementById("notify").innerText = 'Wrong';
+        document.getElementById("toast-red").style.display = 'grid'
+        document.getElementById("toast-green").style.display = 'none'
     }
 }

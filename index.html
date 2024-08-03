@@ -10,12 +10,12 @@
 <body>
     <div class="container">
         <div class="generator">
-            <button onclick="generateSecretKey()">Generate Secret Key</button>
+            <button class="bg-blue border-1 button-height" onclick="generateSecretKey()">Generate Secret Key</button>
             <span id="secret-key" class="display-input text-center">******</span>
         </div>
         <div class="input">
             <div class="display">
-                <label class="text-center">Enter PIN:</label>
+                <label class="text-center">Enter PIN</label>
                 <span id="display-input" class="display-input text-center">0</span>
             </div>
 
@@ -32,14 +32,19 @@
 
                 <button onclick="appendNumber(9)">9</button>
                 <button onclick="appendNumber(0)">0</button>
-                <button class="" onclick="deleteLast()">x</button>
-                <button class="" onclick="clearInput()">Clear</button>
+                <button class="bg-yello border-1" onclick="deleteLast()">X</button>
+                <button class="bg-red border-1" onclick="clearInput()">Clear</button>
 
-                <button class="col-span-full" onclick="submitPIN()">Submit</button>
+                <button class="col-span-full bg-green border-1" onclick="submitPIN()">Submit</button>
             </div>
 
-            <div class="toast" id="toast">
-                <img id="icon" src="" alt="icon"><span id="notify"></span>
+            <div id="toast-green" class="notification">
+                <img src="./assets/right.png" alt="icon">
+                <span class="text-green">PIN matched with Key</span>
+            </div>
+            <div id="toast-red" class="notification">
+                <img src="./assets/wrong.png" alt="icon">
+                <span class="text-red">PIN not matched with Key</span>
             </div>
         </div>
     </div>

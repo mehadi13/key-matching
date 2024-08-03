@@ -57,28 +57,67 @@ button {
 
 img {
     height: 1em;
+    place-self: center;
+    margin-top: 5px;
 }
 
 .col-span-full {
     grid-column: span 2 / span 2;
 }
 
-.toast {
-    display: grid;
-    place-content: center;
+.notification {
+    color: #e50909;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.text-nm {
+    font-size: 1rem;
+}
+
+.text-green {
+    color: #16771b;
 }
 
 .bg-yello {
-    background-color: yellowgreen;
+    background-color: rgb(183, 183, 8);
 }
 
 .bg-red {
-    background-color: red;
+    background-color: rgb(197, 13, 13);
 }
 
 .bg-green {
-    background-color: greenyellow;
+    background-color: rgb(21, 91, 21);
 }
+
+.border-1 {
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+.border-2 {
+    border-color: black;
+    border: solid;
+    border-width: 2px;
+}
+
+button:hover {
+    background-color: cadetblue;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+.bg-blue {
+    background-color: burlywood;
+}
+
+.button-height {
+    place-self: center;
+    font-size: large;
+}
+
 
 @media (min-width: 640px) {
     .generator {
@@ -95,6 +134,11 @@ img {
 
     .col-span-full {
         grid-column: span 3 / span 3;
+    }
+
+    .button-height {
+        max-height: 2.5rem;
+        place-self: center;
     }
 }
 
