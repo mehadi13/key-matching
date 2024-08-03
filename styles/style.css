@@ -1,0 +1,29 @@
+.container {
+    display: grid;
+    grid-column: 1;
+    gap: 5px;
+    place-content: center;
+}
+
+.generator {
+   border-width: 2px;
+   border-color: brown;
+   border: solid;
+}
+
+.input {
+    border-width: 2px;
+   border-color: brown;
+   border: solid;
+}
+
+.display {
+    display: grid;
+    grid-column: 1;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+}
