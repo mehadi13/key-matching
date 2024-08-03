@@ -11,12 +11,12 @@
     <div class="container">
         <div class="generator">
             <button onclick="generateSecretKey()">Generate Secret Key</button>
-            <span id="secret-key" class="display-input text-center"></span>
+            <span id="secret-key" class="display-input text-center">******</span>
         </div>
         <div class="input">
             <div class="display">
                 <label class="text-center">Enter PIN:</label>
-                <span id="display-input" class="display-input text-center"></span>
+                <span id="display-input" class="display-input text-center">0</span>
             </div>
 
             <div class="keys">
@@ -32,10 +32,10 @@
 
                 <button onclick="appendNumber(9)">9</button>
                 <button onclick="appendNumber(0)">0</button>
-                <button onclick="deleteLast()">x</button>
-                <button onclick="clearInput()">Clear</button>
+                <button class="" onclick="deleteLast()">x</button>
+                <button class="" onclick="clearInput()">Clear</button>
 
-                <button onclick="submitPIN()">Submit</button>
+                <button class="col-span-full" onclick="submitPIN()">Submit</button>
             </div>
 
             <div class="toast" id="toast">

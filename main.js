@@ -9,18 +9,24 @@ function generateSecretKey() {
 
 function appendNumber(number) {
     const pin = displayInput.innerText;
-    if (pin.length < 6) {
+    if(pin == "0") {
+        displayInput.innerText = number;
+    } else if(pin.length < 6) {
         displayInput.innerText += number;
     }
-
 }
 
 function deleteLast() {
-    displayInput.innerText = displayInput.innerText.slice(0, -1);
+    const pin = displayInput.innerText;
+    if(pin.length == 1) {
+        displayInput.innerText = "0";
+    } else {
+        displayInput.innerText = displayInput.innerText.slice(0, -1);
+    }
 }
 
 function clearInput() {
-    displayInput.innerText = "";
+    displayInput.innerText = "0";
     document.getElementById("toast").style.display = 'none'
 }
 

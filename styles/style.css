@@ -1,20 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+button {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+
 .container {
     display: grid;
-    grid-column: 1;
     gap: 5px;
-    place-content: center;
+    padding: 10px;
+    border: solid;
+    border-radius: 5px;
+    border-color: black;
 }
 
 .generator {
-   border-width: 2px;
-   border-color: brown;
-   border: solid;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: grid;
+    grid-column: 1;
 }
 
 .input {
-    border-width: 2px;
-   border-color: brown;
-   border: solid;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: grid;
+    grid-column: 1;
 }
 
 .display {
@@ -35,4 +57,53 @@
 
 img {
     height: 1em;
+}
+
+.col-span-full {
+    grid-column: span 2 / span 2;
+}
+
+.toast {
+    display: grid;
+    place-content: center;
+}
+
+.bg-yello {
+    background-color: yellowgreen;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-green {
+    background-color: greenyellow;
+}
+
+@media (min-width: 640px) {
+    .generator {
+        grid-column: 2;
+    }
+
+    .input {
+        grid-column: 3;
+    }
+
+    .keys {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .col-span-full {
+        grid-column: span 3 / span 3;
+    }
+}
+
+@media (min-width: 768px) {
+    .keys {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .col-span-full {
+        grid-column: span 4 / span 4;
+    }
 }
