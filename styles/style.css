@@ -118,6 +118,12 @@ button:hover {
     font-size: large;
 }
 
+.tooltip {
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    cursor: pointer;
+}
+
 
 @media (min-width: 640px) {
     .generator {

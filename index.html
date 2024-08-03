@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="generator">
-            <button class="bg-blue border-1 button-height" onclick="generateSecretKey()">Generate Secret Key</button>
+            <button title="Press 'Enter' key from keyboard" class="bg-blue border-1 button-height tooltip" onclick="generateSecretKey()">Generate Secret Key</button>
             <span id="secret-key" class="display-input text-center">******</span>
         </div>
         <div class="input">
@@ -32,10 +32,10 @@
 
                 <button onclick="appendNumber(9)">9</button>
                 <button onclick="appendNumber(0)">0</button>
-                <button class="bg-yello border-1" onclick="deleteLast()">X</button>
-                <button class="bg-red border-1" onclick="clearInput()">Clear</button>
+                <button class="bg-yello border-1" onclick="deleteLast()" title="Press 'backspace' key from keyboard">X</button>
+                <button class="bg-red border-1" onclick="clearInput()" title="Press 'delete' key from keyboard">Clear</button>
 
-                <button class="col-span-full bg-green border-1" onclick="submitPIN()">Submit</button>
+                <button class="col-span-full bg-green border-1" onclick="submitPIN()" title="Press 'Space' key from keyboard">Submit</button>
             </div>
 
             <div id="toast-green" class="notification">

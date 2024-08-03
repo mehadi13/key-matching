@@ -10,16 +10,16 @@ function generateSecretKey() {
 
 function appendNumber(number) {
     const pin = displayInput.innerText;
-    if(pin == "0") {
+    if (pin == "0") {
         displayInput.innerText = number;
-    } else if(pin.length < 6) {
+    } else if (pin.length < 6) {
         displayInput.innerText += number;
     }
 }
 
 function deleteLast() {
     const pin = displayInput.innerText;
-    if(pin.length == 1) {
+    if (pin.length == 1) {
         displayInput.innerText = "0";
     } else {
         displayInput.innerText = displayInput.innerText.slice(0, -1);
@@ -43,3 +43,24 @@ function submitPIN() {
         document.getElementById("toast-green").style.display = 'none'
     }
 }
+
+
+// handle key press
+document.addEventListener('keydown', function (event) {
+    var key = event.key;
+
+    // Allow only numeric keys, Enter key, Delete key, and Backspace key
+    if ((key >= '0' && key <= '9')) {
+        appendNumber(key);
+    } else if (key === 'Backspace') {
+        deleteLast();
+    } else if (key === 'Delete') {
+        clearInput();
+    } else if (key === ' ') {
+        submitPIN();
+    } else if (key === 'Enter') {
+        generateSecretKey();
+    } else {
+        event.preventDefault();
+    }
+});
