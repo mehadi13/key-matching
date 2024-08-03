@@ -5,42 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Matcher</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div class="container">
-    <div class="generator">
-        <button>Generate Secret Key</button>
-        <input type="text" disabled/>
+        <div class="generator">
+            <button onclick="generateSecretKey()">Generate Secret Key</button>
+            <span id="secret-key" class="display-input text-center"></span>
+        </div>
+        <div class="input">
+            <div class="display">
+                <label class="text-center">Enter PIN:</label>
+                <span id="display-input" class="display-input text-center"></span>
+            </div>
+
+            <div class="keys">
+                <button onclick="appendNumber(1)">1</button>
+                <button onclick="appendNumber(2)">2</button>
+                <button onclick="appendNumber(3)">3</button>
+                <button onclick="appendNumber(4)">4</button>
+
+                <button onclick="appendNumber(5)">5</button>
+                <button onclick="appendNumber(6)">6</button>
+                <button onclick="appendNumber(7)">7</button>
+                <button onclick="appendNumber(8)">8</button>
+
+                <button onclick="appendNumber(9)">9</button>
+                <button onclick="appendNumber(0)">0</button>
+                <button onclick="deleteLast()">x</button>
+                <button onclick="clearInput()">Clear</button>
+
+                <button onclick="submitPIN()">Submit</button>
+            </div>
+
+            <div class="toast" id="toast">
+                <img id="icon" src="" alt="icon"><span id="notify"></span>
+            </div>
+        </div>
     </div>
-    <div class="input">
-        <div class="display">
-            <label>Enter PIN:</label>
-            <input type="text" disabled/>
-        </div>
-
-        <div class="keys">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-
-            <button>9</button>
-            <button>0</button>
-            <button>x</button>
-            <button>Submit</button>
-
-            <button>Clear</button>
-        </div>
-
-        <div class="tost">
-            <span>Notify</span>
-        </div>
-    </div>
-</div>
 </body>
 </html>
